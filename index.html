@@ -33,10 +33,11 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <a href="/" class="logo">
             <img src="assets/images/logo.svg" alt="JSPub logo">
         </a>
+        <button class="menu-btn blue"> Menu </button>
         <nav class="header__nav">
             <a href="#speakers"> Speakers </a>
             <a href="#venue"> Venue </a>
@@ -48,7 +49,7 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header> -->
     <main>
         <section class="poster">
             <div class="poster__main-info">
@@ -61,103 +62,182 @@
                 <a href="ceva"><button class="blue"> Register for free </button></a>
             </div>
         </section>
-        <!-- <section id="agenda">
+        <section id="agenda">
             <div class="content">
-                <h2> Agenda</h2>
-                <div>
-                </div>
+                <h2> <span>Agenda</span></h2>
+                <ul>
+                    <li class="talk">
+                        <span class="talk__time">18:00</span>
+                        <img class="talk__speaker" src="/dist/assets/images/character.png">
+                        <div class="talk__info">
+                            <p class="talk__title">The new Javascript?</p>
+                            <span class="talk__description">The JS world has gone through some big changes lately and
+                                apparently it's not going to stop very soon. Among those, two patterns keep emerging:
+                                types and cross platform. I propose we have a look at an alternative solution which
+                                seems to resolve those two issues together: ReasonML. </span>
+                        </div>
+                    </li>
+                    <li class="talk">
+                        <span class="talk__time">18:30</span>
+                        <img class="talk__speaker" src="/dist/assets/images/character.png">
+                        <div class="talk__info">
+                            <p class="talk__title">Optimize like your life depends on it!</p>
+                            <span class="talk__description">Building a performant, non-trivial web app is a challenge
+                                every developer must take, be it just for educational purposes. It's no small feat to
+                                accomplish this, as it requires curiosity and perseverance, as well as the technical
+                                skills to back them up! So, come with me in this journey where we'll update the s***
+                                out of a very real app and discover just how rewarding this is!</span>
+                        </div>
+                    </li>
+                    <li class="talk">
+                        <span class="talk__time">19:00</span>
+                        <img class="talk__speaker" src="/dist/assets/images/character.png">
+                        <div class="talk__info">
+                            <p class="talk__title">From 0 to 60 FPS: A look into Game Development for the Web</p>
+                            <span class="talk__description">I know what you're thinking. "Game Development for the Web?
+                                Hah, but JavaScript is single threaded! Funny joke, mate.". Even though this domain is
+                                seen as taboo from a Web Developer's perspective, it's building up potential real fast
+                                with WebAssembly being supported by 4 major browsers. Join me in this talk about the
+                                past, present and future of Game Development for the Web.</span>
+                        </div>
+                    </li>
+                    <li class="talk">
+                        <span class="talk__time">19:30</span>
+                        <img class="talk__speaker" src="/dist/assets/images/character.png">
+                        <div class="talk__info">
+                            <p class="talk__title">Paper programs</p>
+                            <span class="talk__description">Ever wondered how does a program look physically? Wonder no
+                                more, you will get the chance to see.</span>
+                        </div>
+                    </li>
+                    <li class="talk">
+                        <span class="talk__time">18:00</span>
+                        <img class="talk__speaker" src="/dist/assets/images/character.png">
+                        <div class="talk__info">
+                            <p class="talk__title">Workers and multithreading in JS</p>
+                            <span class="talk__description">If you ever had to cruch a lot of data in the browser and
+                                then sync the data across multiple tabs
+                                and have the data render realy fast on the screen without breaking the page then you've
+                                come to the right
+                                place. Will have a fast bird eye view of the Web Worker API with working examples and
+                                will ponder one
+                                questions that come with this great power.</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </section> -->
+        </section>
         <section id="speakers">
             <div class="content">
-                <h2> Our speakers</h2>
-                <div class="speakers_pictures">
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> 
-                                <span>Mili Milion</span> 
-                                <span>loves bikes</span>
-                            </h3>
+                <h2> <span>Our speakers</span></h2>
+                <ul>
+                    <li class="speaker">
+                        <div class="speaker__image">
+                            <img src="/dist/assets/images/character.png">
+                            <img src="/dist/assets/images/person.jpg">
                         </div>
-                    </div>
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> Mili Milion </h3>
+                        <div class="speaker__description">
+                            <h3> Alexandru Badea</h3>
+                            <p>Just your random happy web developer with a craving for all JavaScript stuff.
+                                Ironically, my presentation is about something else, but it's pretty close 😊</p>
                         </div>
-                    </div>
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> Mili Milion </h3>
+                    </li>
+                    <li class="speaker speaker__description--inverted">
+                        <div class="speaker__description">
+                            <h3> Alexandru Pavaloi</h3>
+                            <p>Pava is an enthusiastic Front-end developer, speaker & trainer from Iasi, Romania. It's
+                                true that he got into JavaScript by mistake, but now he absolutely loves it and thinks
+                                it’s one of the best jobs out there! Oh, he also loves bikes! </p>
                         </div>
-                    </div>
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> Mili Milion </h3>
+                        <div class="speaker__image">
+                            <img src="/dist/assets/images/character.png">
+                            <img src="/dist/assets/images/person.jpg">
                         </div>
-                    </div>
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> Mili Milion </h3>
+                    </li>
+                    <li class="speaker">
+                        <div class="speaker__image">
+                            <img src="/dist/assets/images/character.png">
+                            <img src="/dist/assets/images/person.jpg">
                         </div>
-                    </div>
-                    <div class="speaker">
-                        <img class="character" src="/dist/assets/images/character.png">
-                        <img class="person" src="/dist/assets/images/person.jpg">
-                        <div class="speaker__info">
-                            <h3> Mili Milion </h3>
+                        <div class="speaker__description">
+                            <h3> Alexandru Grigoruta</h3>
+                            <p>Front-End Developer for the past couple years, I enjoy breaking down stuff to the core,
+                                in order to understand why things work and how. I'm always eager to share my
+                                discoveries, and I'm always excited when I find out about something new and cool from
+                                the JavaScript world. See you all at JSPub 3.0!</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="speaker speaker__description--inverted">
+                        <div class="speaker__description">
+                            <h3> Gabriel Atz & Aka</h3>
+                            <p>JS zealot and Web Developer who's always interested in new tech stuff. And beers, we
+                                should definitely not forget about beers.</p>
+                        </div>
+                        <div class="speaker__image">
+                            <img src="/dist/assets/images/character.png">
+                            <img src="/dist/assets/images/person.jpg">
+                        </div>
+                    </li>
+                    <li class="speaker">
+
+                        <div class="speaker__image">
+                            <img src="/dist/assets/images/character.png">
+                            <img src="/dist/assets/images/person.jpg">
+                        </div>
+                        <div class="speaker__description">
+                            <h3> Gagiu</h3>
+                            <p>To keep it simple, my name is Stefan with 3 years experience in the web development
+                                which at
+                                this current moment in time is also my passion. Intrested in learning diffrent ways of
+                                writing code and
+                                applications (Functional/Logical etc.) or use the AI to write the code for you ?! Hope
+                                to see you at the
+                                event.
+
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="team">
             <div class="content">
-                <h2> Our Awesome Team </h2>
+                <h2> <span>Our Awesome Team</span> </h2>
                 <div class="team__pictures">
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/joao.jpg">
                         <div class="member__info">
-                            <h3> Alexandru Pavaloi </h3>
+                            <h3> Joao </h3>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/vlad.jpg">
                         <div class="member__info">
-                            <h3> Mili Milion </h3>
+                            <h3> Mili </h3>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/pava.jpg">
                         <div class="member__info">
-                            <h3> Mili Milion </h3>
+                            <h3> Pava </h3>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/anda.jpg">
                         <div class="member__info">
-                            <h3> Mili Milion </h3>
+                            <h3> Anda </h3>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/paul.jpg">
                         <div class="member__info">
-                            <h3> Mili Milion </h3>
+                            <h3> Paul </h3>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="/dist/assets/images/character.png">
+                        <img src="https://jspubiasi.github.io/img/sergiu.jpg">
                         <div class="member__info">
-                            <h3> Mili Milion </h3>
+                            <h3> Sergiu </h3>
                         </div>
                     </div>
                 </div>
@@ -169,7 +249,6 @@
         </div>
     </main>
     <footer>
-        <span class="copyright"> &copy; 2018 · JSPub. All rights reserved. </span>
         <span class="made-by"> Made with
             <span class="heart">❤</span>
             by the WebCluster at <a href="https://tss-yonder.com">Yonder-Iasi</a> </span>

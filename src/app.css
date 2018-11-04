@@ -38,6 +38,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Lato, sans-serif;
+    box-sizing: border-box;
+}
+
+body * {
+    box-sizing: inherit;
 }
 
 h1,
@@ -82,8 +87,9 @@ button.pink:hover {
 
 
 header {
-    background-color: #fff;
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     padding: 1em 5%;
     justify-content: space-between;
     border-bottom: 1px var(--silver) solid;
@@ -97,6 +103,16 @@ header {
     width: 7.5em;
 }
 
+.menu-btn {
+    font-size: .9em;
+}
+
+.menu-btn:focus+.header__nav {
+    display: block;
+}
+
+
+
 .header__nav {
     display: flex;
     font-size: 20px;
@@ -106,7 +122,7 @@ header {
 }
 
 .header__nav a,
-.header__nav > * {
+.header__nav>* {
     cursor: pointer;
     display: inline-block;
     color: var(--blue);
@@ -134,7 +150,10 @@ header {
     z-index: 1;
     list-style: none;
     position: relative;
+    width: 8em;
+    z-index: 2;
 }
+
 
 #pastEditions ul {
     opacity: 0;
@@ -145,19 +164,27 @@ header {
     list-style: none;
     padding: .75em .5em;
     transition: all .25s ease-out;
+    pointer-events: none;
 }
 
-#pastEditions:hover ul{
+#pastEditions ul li {
+    margin: 1em 0;
+}
+
+#pastEditions:hover ul {
     opacity: 1;
     transform: translateY(0);
     z-index: 1;
+    pointer-events: initial;
 }
 
 main>section {
     min-height: 100vh;
     width: 100%;
-    padding: 2em .5em 0 .5em;
+    padding: 2em .5em;
 }
+
+
 
 main>section>.content {
     width: 100%;
@@ -167,8 +194,19 @@ main>section>.content {
 
 main>section>.content h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: calc(20px + 1vw);
+    margin-bottom: 2em;
 }
+
+.content h2 span {
+    display: inline-block;
+    color: #fff;
+    background: var(--blue);
+    padding: .5em 1em;
+    position: relative;
+
+}
+
 
 .poster {
     background-size: cover;
@@ -190,18 +228,18 @@ main>section>.content h2 {
 }
 
 .poster__main-info {
-    font-size: 28px;
+    font-size: calc(15px + .75vw);
     position: relative;
     border-radius: .5em;
     background-color: #fff;
-    padding: 4em 5em;
+    padding: 10%;
     z-index: 1;
     text-align: center;
     box-shadow: 0 0 5px #fff;
 }
 
 .poster__main-info img {
-    width: 15em;
+    width: 100%;
     display: block;
 }
 
@@ -235,55 +273,82 @@ main>section>.content h2 {
     }
 }
 
+#speakers ul,
+#agenda ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.talk {
+    display: flex;
+    font-size: 1.25em;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 2px dashed var(--silver);
+    padding: 1em 2em;
+    margin-bottom: 1em;
+}
+
+
+.talk__time {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.talk__speaker {
+    border-radius: 50%;
+    max-height: 5em;
+    margin: 0 4%;
+}
+
+.talk__info {
+    flex: 1 0 50%;
+}
+
+.talk__title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #004a91;
+    margin: 0 0 .25em 0;
+}
+
+.talk__description {
+    font-size: .85em;
+}
+
 
 .team {
     padding-top: 3em;
 }
 
-.speakers_pictures,
-.team_pictures {
-    margin-top: 5em;
+.team__pictures {
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
 }
 
-.speaker,
 .team-member {
-    width: 32%;
-    margin-left: 1%;
+    width: 20%;
+    margin: 0 2.5%;
     cursor: pointer;
     margin-bottom: 1em;
     display: inline-block;
     position: relative;
 }
 
-.speaker:hover img.character,
-.speaker:hover h3 span:first-child {
-    display: none;
-}
 
-.speaker:hover img.person,
-.speaker:hover h3 span:nth-child(2) {
-    display: inline-block;
-}
 
-.speaker:hover .speaker__info,
 .team-member:hover .member__info {
     opacity: 1;
 }
 
 
-.speaker img,
 .team-member img {
     width: 100%;
 }
 
-.speaker img.person,
-.speaker h3 span:nth-child(2) {
-    display: none;
-}
 
-.speaker__info,
 .member__info {
     font-size: 24px;
     text-align: center;
@@ -301,12 +366,10 @@ main>section>.content h2 {
 
 footer {
     border-top: 2px solid var(--blue);
+    flex-flow: row wrap;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    color: #fff;
+    justify-content: space-between;
     color: #000;
-    /* background: var(--blue); */
     padding: 1em 5%;
 }
 
@@ -337,4 +400,133 @@ footer>* {
     color: var(--blue);
     margin: 0 .25em;
     text-decoration: none;
+}
+
+
+
+
+
+.speaker {
+    box-shadow: 0 0 5px var(--silver);
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em 2em;
+    align-items: center;
+    margin-bottom: 3em;
+    justify-content: space-between;
+}
+
+.speaker:hover .speaker__image img:nth-child(2) {
+    transform: translateX(6em);
+}
+
+.speaker__image {
+    margin: 0 2%;
+    position: relative;
+}
+
+.speaker__image img {
+    height: 6em;
+    width: 6em;
+    position: relative;
+    z-index: 1;
+}
+
+.speaker__image img:nth-child(2) {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.speaker__description {
+    flex: 1 0 50%;
+    max-width: 70%;
+    margin: 0 2%;
+}
+
+.speaker__description h3 {
+    background-color: var(--yellow);
+    display: inline-block;
+    padding: .5em 1em;
+    margin-block-end: .25em;
+}
+
+.speaker__description--inverted:hover .speaker__image img:nth-child(2) {
+    transform: translateX(-6em);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .team-member {
+        width: 30%;
+    }
+} 
+
+@media screen and (max-width: 640px) {
+    header button {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex: 1 0 100%;
+        justify-content: center;
+    }
+
+    .header__nav>* {
+        width: 100%;
+        text-align: center;
+    }
+
+    .talk__time {
+        flex: 1 0 25%;
+    }
+
+    .talk__speaker {
+        /* flex: 1 0 50%; */
+        text-align: center;
+    }
+
+    .talk__info {
+        margin-top: 1em;
+    }
+
+    .speaker {
+        padding: 10em 2em 1em 2em;
+        position: relative;
+    }
+
+    .speaker__image {
+        position: absolute;
+        top: 1em;
+        left: 2em;
+    }
+    .speaker__image,
+    .speaker__description {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    .team-member {
+        width: 50%;
+    }
+    footer {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .made-by {
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 1em;
+    }
 }
