@@ -103,22 +103,19 @@ header {
     width: 7.5em;
 }
 
-.menu-btn {
+#menuBtn {
     font-size: .9em;
 }
 
-.menu-btn:focus+.header__nav {
+header.header--menu-open .header__nav {
     display: block;
 }
-
-
 
 .header__nav {
     display: flex;
     font-size: 20px;
     justify-content: flex-end;
     flex: 2 0 30%;
-    height: 1.5em;
 }
 
 .header__nav a,
@@ -159,7 +156,7 @@ header {
     opacity: 0;
     margin: 0;
     transform: translateY(-10%);
-    position: relative;
+    position: absolute;
     background: #fff;
     list-style: none;
     padding: .75em .5em;
@@ -318,7 +315,7 @@ main>section>.content h2 {
 }
 
 
-.team {
+#team {
     padding-top: 3em;
 }
 
@@ -462,7 +459,7 @@ footer>* {
     .team-member {
         width: 30%;
     }
-} 
+}
 
 @media screen and (max-width: 640px) {
     header button {
@@ -471,18 +468,29 @@ footer>* {
 
     .header__nav {
         display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
         flex: 1 0 100%;
         justify-content: center;
     }
 
     .header__nav>* {
         width: 100%;
+        margin: .5em 0;
         text-align: center;
+    }
+
+    #pastEditions {
+        width: 100%;
+        border-top: 1px solid var(--silver);
+        padding-top: 1em;
+    }
+    
+    #pastEditions ul {
+        opacity: 1;
+        transform: translateY(0);
+        position: relative;
+        z-index: 1;
+        pointer-events: initial;
+        list-style: disc;
     }
 
     .talk__time {
@@ -503,11 +511,16 @@ footer>* {
         position: relative;
     }
 
+    .speaker:hover .speaker__image img:nth-child(2) {
+        transform: translateX(6em);
+    }
+
     .speaker__image {
         position: absolute;
         top: 1em;
         left: 2em;
     }
+
     .speaker__image,
     .speaker__description {
         flex: 1 0 100%;
@@ -517,6 +530,7 @@ footer>* {
     .team-member {
         width: 50%;
     }
+
     footer {
         flex-flow: column wrap;
         align-items: center;
