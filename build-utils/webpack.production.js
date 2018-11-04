@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = () => ({
     devtool: "none",
     output: {
-        publicPath: "/dist/",
         filename: 'jspub.[contenthash].js'
     },
     module: {

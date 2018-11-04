@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Comfortaa Regular'), local('Comfortaa-Regular'),
-        url('/dist/assets/fonts/comfortaa-v12-latin-regular.woff2') format('woff2'),
-        url('/dist/assets/fonts/comfortaa-v12-latin-regular.woff') format('woff');
+        url('/assets/fonts/comfortaa-v12-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/comfortaa-v12-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Comfortaa Bold'), local('Comfortaa-Bold'),
-        url('/dist/assets/fonts/comfortaa-v12-latin-700.woff2') format('woff2'),
-        url('/dist/assets/fonts/comfortaa-v12-latin-700.woff') format('woff');
+        url('/assets/fonts/comfortaa-v12-latin-700.woff2') format('woff2'),
+        url('/assets/fonts/comfortaa-v12-latin-700.woff') format('woff');
 }
 
 @font-face {
@@ -21,8 +21,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Lato Regular'), local('Lato-Regular'),
-        url('/dist/assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
-        url('/dist/assets/fonts/lato-v14-latin-regular.woff') format('woff');
+        url('/assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/lato-v14-latin-regular.woff') format('woff');
 }
 
 
@@ -105,6 +105,7 @@ header {
 
 #menuBtn {
     font-size: .9em;
+    display: none;
 }
 
 header.header--menu-open .header__nav {
@@ -254,19 +255,19 @@ main>section>.content h2 {
 
 @media screen and (min-width: 2000px) {
     .poster {
-        background-image: url("/dist/assets/images/cover_high.jpg");
+        background-image: url("/assets/images/cover_high.jpg");
     }
 }
 
 @media screen and (min-width: 1200px) {
     .poster {
-        background-image: url("/dist/assets/images/cover_med.jpg");
+        background-image: url("/assets/images/cover_med.jpg");
     }
 }
 
 @media screen and (max-width: 1200px) {
     .poster {
-        background-image: url("/dist/assets/images/cover_low.jpg");
+        background-image: url("/assets/images/cover_low.jpg");
     }
 }
 
@@ -461,8 +462,9 @@ footer>* {
     }
 }
 
+
 @media screen and (max-width: 640px) {
-    header button {
+    #menuBtn {
         display: block;
     }
 
@@ -483,7 +485,7 @@ footer>* {
         border-top: 1px solid var(--silver);
         padding-top: 1em;
     }
-    
+
     #pastEditions ul {
         opacity: 1;
         transform: translateY(0);
