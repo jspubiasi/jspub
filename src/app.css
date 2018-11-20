@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Comfortaa Regular'), local('Comfortaa-Regular'),
-        url('/assets/fonts/comfortaa-v12-latin-regular.woff2') format('woff2'),
-        url('/assets/fonts/comfortaa-v12-latin-regular.woff') format('woff');
+    url('/assets/fonts/comfortaa-v12-latin-regular.woff2') format('woff2'),
+    url('/assets/fonts/comfortaa-v12-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Comfortaa Bold'), local('Comfortaa-Bold'),
-        url('/assets/fonts/comfortaa-v12-latin-700.woff2') format('woff2'),
-        url('/assets/fonts/comfortaa-v12-latin-700.woff') format('woff');
+    url('/assets/fonts/comfortaa-v12-latin-700.woff2') format('woff2'),
+    url('/assets/fonts/comfortaa-v12-latin-700.woff') format('woff');
 }
 
 @font-face {
@@ -21,8 +21,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Lato Regular'), local('Lato-Regular'),
-        url('/assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
-        url('/assets/fonts/lato-v14-latin-regular.woff') format('woff');
+    url('/assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+    url('/assets/fonts/lato-v14-latin-regular.woff') format('woff');
 }
 
 
@@ -318,6 +318,7 @@ main>section>.content h2 {
 
 #team {
     padding-top: 3em;
+    min-height: 10em;
 }
 
 .team__pictures {
@@ -343,13 +344,14 @@ main>section>.content h2 {
 
 
 .team-member img {
-    width: 100%;
+    width:9em;
 }
 
 
 .member__info {
     font-size: 24px;
     text-align: center;
+    width: 9rem;
 }
 
 
@@ -360,6 +362,10 @@ main>section>.content h2 {
 
 .call-to-action h2 {
     font-size: calc(1em + 2vw);
+}
+
+.in_text_image {
+    height: 1em;
 }
 
 footer {
@@ -400,10 +406,6 @@ footer>* {
     text-decoration: none;
 }
 
-
-
-
-
 .speaker {
     box-shadow: 0 0 5px var(--silver);
     display: flex;
@@ -415,7 +417,7 @@ footer>* {
 }
 
 .speaker:hover .speaker__image img:nth-child(2) {
-    transform: translateX(6em);
+    transform: translateX(9em);
 }
 
 .speaker__image {
@@ -424,8 +426,8 @@ footer>* {
 }
 
 .speaker__image img {
-    height: 6em;
-    width: 6em;
+    height: 9em;
+    width: 9em;
     position: relative;
     z-index: 1;
 }
@@ -440,7 +442,7 @@ footer>* {
 
 .speaker__description {
     flex: 1 0 50%;
-    max-width: 70%;
+    max-width: 62%;
     margin: 0 2%;
 }
 
@@ -452,7 +454,7 @@ footer>* {
 }
 
 .speaker__description--inverted:hover .speaker__image img:nth-child(2) {
-    transform: translateX(-6em);
+    transform: translateX(-9em);
 }
 
 
@@ -514,7 +516,7 @@ footer>* {
     }
 
     .speaker:hover .speaker__image img:nth-child(2) {
-        transform: translateX(6em);
+        transform: translateX(9em);
     }
 
     .speaker__image {

@@ -5,8 +5,6 @@ new SmoothScroll('a[href*="#"]');
 import "./font.css";
 import "./app.css";
 
-console.log("bubu");
-
 const headerEl = document.getElementsByTagName("header")[0];
 
 document.getElementById("menuBtn").addEventListener("click", () => {
