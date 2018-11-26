@@ -304,6 +304,11 @@ main>section>.content h2 {
     flex: 1 0 50%;
 }
 
+.talk__info p span {
+    color: #000000;
+    font-size: 0.75em;
+}
+
 .talk__title {
     font-size: 1em;
     font-weight: bold;
