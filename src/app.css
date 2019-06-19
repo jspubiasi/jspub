@@ -241,13 +241,13 @@ main>section>.content h2 {
     display: block;
 }
 
-.about_edition-type {
+/* .about_edition-type {
     background-color: var(--yellow);
     padding: .25em .5em;
     font-size: 18px;
     text-transform: uppercase;
     display: inline-block;
-}
+} */
 
 .poster__main-info button {
     margin-top: 2em;
@@ -321,7 +321,7 @@ main>section>.content h2 {
 }
 
 
-#team {
+/* #team {
     padding-top: 3em;
     min-height: 10em;
 }
@@ -350,7 +350,7 @@ main>section>.content h2 {
 
 .team-member img {
     width:9em;
-}
+} */
 
 
 .member__info {
@@ -464,9 +464,9 @@ footer>* {
 
 
 @media screen and (max-width: 1000px) {
-    .team-member {
+    /* .team-member {
         width: 30%;
-    }
+    } */
 }
 
 
@@ -536,9 +536,9 @@ footer>* {
         max-width: 100%;
     }
 
-    .team-member {
+    /* .team-member {
         width: 50%;
-    }
+    } */
 
     footer {
         flex-flow: column wrap;
