@@ -241,6 +241,28 @@ main>section>.content h2 {
     display: block;
 }
 
+.poster__date {
+    margin-bottom: 15px;
+}
+
+.poster__location {
+    margin-bottom: 30px;
+}
+
+.poster__location-text, .poster__main-info .poster__map-pin {
+    display: inline;
+}
+
+.poster__location-text {
+    padding: 3px;
+}
+
+.poster__main-info .poster__map-pin {
+    width: 22px;
+    max-width: 27px;
+    margin: 0;
+}
+
 /* .about_edition-type {
     background-color: var(--yellow);
     padding: .25em .5em;
@@ -500,6 +522,10 @@ footer>* {
         z-index: 1;
         pointer-events: initial;
         list-style: disc;
+    }
+
+    .poster__main-info .poster__map-pin {
+        width: 20px;
     }
 
     .talk__time {
