@@ -241,13 +241,17 @@ main>section>.content h2 {
     display: block;
 }
 
+.poster__main-info h2 {
+    color: var(--blue);
+}
+
 .poster__date {
     margin-bottom: 15px;
 }
 
-.poster__location {
+/* .poster__location {
     margin-bottom: 30px;
-}
+} */
 
 .poster__location-text, .poster__main-info .poster__map-pin {
     display: inline;
